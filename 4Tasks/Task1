@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ShopEasy</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f8fafc;
+        }
+
+        /* Navbar */
+        nav {
+            background: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav h2 {
+            color: #2563eb;
+            margin: 0;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #555;
+        }
+
+        /* Heading */
+        .heading {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .heading h1 {
+            margin: 5px;
+        }
+
+        .heading p {
+            color: #666;
+        }
+
+        /* Main */
+        .main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 25px;
+        }
+
+        /* Filter */
+        .filter {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .filter label {
+            display: block;
+            margin: 12px 0;
+            color: #555;
+        }
+
+        /* Products */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* Card */
+        .card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: 0 3px 10px #ddd;
+        }
+
+        .card img {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+        }
+
+        .info {
+            padding: 15px;
+        }
+
+        .category {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .rating {
+            color: #f59e0b;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .old {
+            font-size: 12px;
+            color: #777;
+            text-decoration: line-through;
+        }
+
+        button {
+            width: 100%;
+            padding: 9px;
+            background: #2563eb;
+            color: white;
+            border: 0;
+            border-radius: 5px;
+        }
+
+        /* Tablet */
+        @media(max-width: 1023px) {
+            .main {
+                display: block;
+            }
+
+            .filter {
+                margin-bottom: 20px;
+            }
+
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media(max-width: 639px) {
+
+            nav a {
+                margin-left: 5px;
+                font-size: 12px;
+            }
+
+            .filter {
+                display: none;
+            }
+
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+
+        <h2>ShopEasy</h2>
+
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">Cart</a>
+        </div>
+
+    </nav>
+
+
+    <!-- Heading -->
+    <div class="heading">
+
+        <h1>Our Products</h1>
+
+        <p>Choose the best products for you</p>
+
+    </div>
+
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Filter -->
+        <div class="filter">
+
+            <h3>Filter</h3>
+
+            <b>Category</b>
+
+            <label>
+                <input type="checkbox"> Electronics
+            </label>
+
+            <label>
+                <input type="checkbox"> Fashion
+            </label>
+
+            <label>
+                <input type="checkbox"> Shoes
+            </label>
+
+            <br>
+
+            <b>Price</b>
+
+            <label>
+                <input type="checkbox"> Under ₹1000
+            </label>
+
+            <label>
+                <input type="checkbox"> Above ₹1000
+            </label>
+
+        </div>
+
+
+        <!-- Products -->
+        <div class="products">
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500">
+
+                <div class="info">
+
+                    <p class="category">Electronics</p>
+
+                    <h3>Headphones</h3>
+
+                    <p class="price">
+                        ₹1999
+                        <span class="old">₹2499</span>
+                    </p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500">
+
+                <div class="info">
+
+                    <p class="category">Accessories</p>
+
+                    <h3>Smart Watch</h3>
+
+                    <p class="price">
+                        ₹2999
+                        <span class="old">₹3499</span>
+                    </p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500">
+
+                <div class="info">
+
+                    <p class="category">Shoes</p>
+
+                    <h3>Running Shoes</h3>
+
+                    <p class="price">
+                        ₹1599
+                        <span class="old">₹1999</span>
+                    </p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500">
+
+                <div class="info">
+
+                    <p class="category">Fashion</p>
+
+                    <h3>Jacket</h3>
+
+                    <p class="price">
+                        ₹2499
+                        <span class="old">₹2999</span>
+                    </p>
+
+                    <button>Add to Cart</button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+</html>
